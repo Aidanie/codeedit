@@ -14,4 +14,4 @@ If you'd like to setup your own CodeEdit instance, you'll to first install the f
     * npm
     * expressjs
 
-Once you've got those installed, simply cd into the CodeEdit directory, run `nodejs server.js` and point your browser to http://localhost/ and you're good to go!
+Once you've got those installed, simply cd into the CodeEdit directory, run `nodejs server.js` and point your browser to `localhost` and you're good to go!
