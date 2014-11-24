@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <title>CodeEdit - Coding</title>
+  </head>
+  <body>
+  <ul class="nav nav-tabs">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/code">New</a>
+    </li>
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" id="syntaxdropdown" data-toggle="dropdown" role="button" aria-expanded="false">Select Syntax</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="#" onclick="changeSyntax(this.id,this.value, true)" id="htmlmixed">HTML/CSS/JS</a>
+        </li>
+        <li>
+          <a href="#" onclick="changeSyntax(this.id,this.value, true)" id="javascript">Javascript</a>
+        </li>
+        <li>
+          <a href="#" onclick="changeSyntax(this.id,this.value, true)" id="clike">Java/C/C++</a>
+        </li>
+        <li>
+          <a href="#" onclick="changeSyntax(this.id,this.value, true)" id="pyton">Python</a>
+        </li>
+        <li>
+          <a href="#" onclick="changeSyntax(this.id,this.value, true)" id="yaml">YAML</a>
+        </li>
+        <li>
+          <a href="#" onclick="changeSyntax(this.id,this.value, true)" id="xml">XML/HTML</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" onclick="setUserName(true)">Change Username</a>
+    </li>
+    <li>
+      <a href="#">Source</a>
+    </li>
+  </ul>
+  <div id="container">
+    <form>
+      <textarea id="code" name="code" rows="5" style="display:none"></textarea>
+    </form>
+  </div>
+  <div class="modal fade" id="getName">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width:500px">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">×</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title">Set Username</h4>
+        </div>
+        <div class="modal-body">
+          <input id="name" type="text" placeholder="Username" style="width: 250px; margin-left:100px" class="form-control" />
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+        <button type="button" class="btn btn-primary" id="submit" data-dismiss="modal">Submit</button></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/socket.io.js"></script> 
+  <script src="js/codemirror.js"></script>
+  <link rel="stylesheet" href="css/codemirror.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="mode/htmlmixed/htmlmixed.js"></script> 
+  <script src="mode/javascript/javascript.js"></script> 
+  <script src="mode/python/python.js"></script> 
+  <script src="mode/yaml/yaml.js"></script> 
+  <script src="mode/clike/clike.js"></script> 
+  <script src="mode/xml/xml.js"></script> 
+  <script src="js/editor.js"></script>
+  </body>
+</html>
