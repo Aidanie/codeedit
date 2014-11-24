@@ -4,7 +4,7 @@ A web based, open-source code editor for collaborative programming.
 
 Please note: CodeEdit is under active development and is **NOT** ready for production use. 
 
-You can checkout a demo over CodeEdit [codeedit.achurch.me](here).
+You can checkout a demo over CodeEdit [here](codeedit.achurch.me).
 
 # Installation
 
