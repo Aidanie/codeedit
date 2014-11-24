@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var port = 80;
 
 app.get('/code', function (req, res) {
 	res.sendFile(__dirname + '/code.html');
@@ -24,10 +25,9 @@ var roomValue = {};
 var roomSyntax = {};
 
 io.on('connection', function (socket) {
-	console.log("a user connected");
 	var room = void 0;
 	socket.on('disconnect', function () {
-		console.log('user disconnected');
+
 	});
 	socket.on('instruction', function (msg) {
 		console.log("room - " + room + " has value - " + msg.roomValue);
@@ -54,6 +54,6 @@ io.on('connection', function (socket) {
 	});
 });
 
-http.listen(80, function () {
-	console.log('listening on *:3000');
+http.listen(port, function () {
+	console.log('Server launched on port - ' + port);
 });
