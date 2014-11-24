@@ -19,4 +19,4 @@ Once you've got Nodejs and npm you'll need the following packages...
     * npm install socket.io
     * npm install serve-favicon
 
-After everything is installed, simply cd into the CodeEdit directory, run `nodejs server.js` and point your browser to `localhost` and you're good to go!
+After everything is installed, simply cd into the directory, run `nodejs server.js` and point your browser to `localhost` and you're good to go!
