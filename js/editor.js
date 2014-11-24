@@ -1,6 +1,18 @@
 var username = void 0;
 
-var socket = io();
+//var socket = io();
+
+var manager = io.Manager('http://localhost:80', { /* options */ });
+manager.on('connect_error', function() {
+    console.log("Connection error, eventually this will be handled with a dialog");
+});
+
+manager.on('disconnect', function() {
+    console.log("Connection error, eventually this will be handled with a dialog");
+});
+
+var socket = io.connect('http://localhost:80');
+
 function getId() {
 	var split = document.URL.split("?");
 	if (split.length == 1) {
@@ -168,11 +180,13 @@ $(document).ready(function () {
 
 	if (localStorage.getItem('username') != void 0) {
 		username = localStorage.getItem('username');
+		$('#nametag').text(username);
 	}
 	//Setup listeners
 	$("#submit").on("click", function (e) {
 		e.preventDefault();
 		username = $('#name').val();
+		$('#nametag').text(username);
 		if (username != undefined && username != "") {
 			localStorage.setItem('username', username);
 		}
