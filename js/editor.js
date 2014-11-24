@@ -2,7 +2,9 @@ var username = void 0;
 
 //var socket = io();
 
-var manager = io.Manager('http://localhost:80', { /* options */ });
+var host = window.location.hostname;
+
+var manager = io.Manager('http://'+host+':80', { /* options */ });
 manager.on('connect_error', function() {
     console.log("Connection error, eventually this will be handled with a dialog");
 });
@@ -11,7 +13,7 @@ manager.on('disconnect', function() {
     console.log("Connection error, eventually this will be handled with a dialog");
 });
 
-var socket = io.connect('http://localhost:80');
+var socket = io.connect('http://'+host+':80');
 
 function getId() {
 	var split = document.URL.split("?");
