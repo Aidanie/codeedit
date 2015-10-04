@@ -11,5 +11,6 @@ You can checkout a demo over CodeEdit [here](http://codeedit.achurch.me).
 If you'd like to setup your own CodeEdit instance, you'll first need to install the following...
 
     * git clone https://github.com/Aidanie/codeedit.git
+    * cd codeedit
     * npm install
     * npm start
