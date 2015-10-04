@@ -4,15 +4,15 @@
   "description": "A free (as in beer) collaborative code editing app",
   "author": "Aidan Church <achurch@protonmail.ch>",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Aidanie/codeedit"
   },
   "bugs": {
-  "url": "https://github.com/Aidanie/codeedit/issues"
-},
+    "url": "https://github.com/Aidanie/codeedit/issues"
+  },
   "dependencies": {
     "express.js": "*",
     "socket.io": "*",
