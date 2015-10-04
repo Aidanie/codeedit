@@ -14,9 +14,9 @@
     "url": "https://github.com/Aidanie/codeedit/issues"
   },
   "dependencies": {
-    "express.js": "*",
-    "socket.io": "*",
-    "serve-favicon": "*"
+    "express": "4.13.3",
+    "socket.io": "1.3.7",
+    "serve-favicon": "2.3.0"
   },
   "preferGlobal": true,
   "private": true,
